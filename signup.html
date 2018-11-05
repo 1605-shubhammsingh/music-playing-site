@@ -1,0 +1,90 @@
+<!doctype html>
+<head>
+<script>
+function validate() {
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var age = document.getElementById("age").value;
+var firstpassword=document.getElementById("password").value;
+var secondpassword=document.getElementById("rpassword").value;
+var emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+if (name!=""&& username!="" && email!="" && contact!="") 
+{
+	if (email.match(emailReg)) 
+	{
+		if (document.getElementById("male").checked || document.getElementById("female").checked || document.getElementById("other").checked) 
+		{
+			
+				if(firstpassword==secondpassword)
+				{
+					alert("All type of validation has done on OnSubmit event.");
+					return true;
+				} 
+				else
+				{
+					alert("password must be same!");  
+                    return false;  
+				}
+				
+			
+        } 
+		else 
+		{
+			alert("You must select gender.....!");
+			return false;
+		}
+	}	
+	else 
+	{
+		alert("Invalid Email Address...!!!");
+		return false;
+    }
+}
+else 
+{
+alert("All fields are required.....!");
+return false;
+}
+}
+</script>
+<title>Connect With Us...</title>
+<link type="text/css" rel="stylesheet" href="stylesheetsignup.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href=home.html>Home</a>
+        <a href=about.html>About</a>
+      
+        <a href=contact.html>Contact</a>
+        <form name="form1" method="POST" action="search.php">
+                <input type="text" name="search" placeholder="Search..">
+                </form>
+    </div> 
+    <div class="sidenav">
+        <img src="logo.jpg"><br>
+        <a href="#">Developed By:-</a>
+        <a href="Shubham.html">Shubham Singh</a>
+    </div>
+    <div id="form">
+    <center><h1>Welcome</h1><h2>Enter Your Details Here</h2></center>
+    <center><form name="myForm" action="insert.php" onsubmit="return validate()" method="post" autocomplete="off">
+            <table>
+                    <tr>
+                    <td>
+                    Name:</td><td><input type="text" name="name" required></td></tr>
+                  
+                    <tr><td>Age:</td><td><input type="text" name="age" required></td></tr>
+                    <tr><td>Gender:</td>
+                    <td><input type="radio" name="gender" value="male" checked required> Male</td></tr>
+                    <tr><td></td><td><input type="radio" name="gender" value="female" required> Female</td></tr>
+                    <tr><td></td><td><input type="radio" name="gender" value="other" required> Other</td></tr>
+                    <tr><td>Email:</td><td><input type="text" name="email" required></td></tr>
+                    <tr><td>Password:</td><td><input type="password" name="password" required></td></tr>
+                    <tr><td>Repeat Password:</td><td><input type="password" name="rpassword" required></td></tr>
+                  </table>
+        <input type="submit" value="Submit">
+
+    </form>
+    </center>
+</body>
+</html>

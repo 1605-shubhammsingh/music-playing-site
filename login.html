@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>Login</title>
+<link type="text/css" rel="stylesheet" href="stylesheetlogin.css">
+</head>
+<body>
+<div class="topnav">
+	<a href=index.html>Home</a>
+	<a href=about.html>About</a>
+	<a href=contact.html>Contact</a>
+	<form name="form1" method="POST" action="search.php">
+			<input type="text" name="search" placeholder="Search..">
+			</form>
+</div> 
+<div class="sidenav">
+	<img src="logo.jpg"><br>
+	<a href="#">Developed By:-</a>
+	<a href="Shubham.html">Shubham Singh</a>
+</div>
+<div id="form">
+	<center><h1>Welcome User</h1><h2>Kindly login by providing the following details.</h2></center>
+    <center>	
+    <form name="myForm" action="login.php" onsubmit="return validate()" method="post">
+        <table>
+            <tr><td>Email Id:</td><td><input type="email" name="email" required></td></td></tr>
+			<tr><td>Password:</td><td><input type="password" name="password" required></td></tr>
+			
+		</table>
+		<input type="submit" value="Submit">
+		<center><h3>Don't Have One?<br><a href="signup.html">Register With Us</a></h3></center>
+
+	</form></center>
+	
+</div>
+</body>
+</html>
